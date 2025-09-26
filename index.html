@@ -3,174 +3,146 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How to Create & Sell Digital Products Using AI – Learn to Earn Online | Tech Buzz</title>
-  <meta name="description" content="Learn how to earn online by creating and selling digital products using AI. Includes bonus ebook: How to Earn 1 Crore Using AI (2026)."/>
+  <title>How to Create & Sell Digital Products Using AI – Tech Buzz</title>
+  <meta name="description" content="Learn how to earn online by creating and selling digital products using AI. Bonus: How to Earn 1 Crore Using AI (2026)."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0b0c0f; --surface:#13141a; --muted:#a7adb5; --text:#f2f4f6;
-      --accent:#ff7a00; --ok:#22c55e; --br:#23242c; --radius:18px;
+      --accent:#ff7a00; --ok:#22c55e; --br:#23242c; --radius:14px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;border-radius:12px}
-    .container{width:min(1100px,92%);margin-inline:auto}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;height:auto;border-radius:8px;display:block;margin:auto}
+    .container{width:92%;max-width:1100px;margin:auto}
 
-    header{position:sticky;top:0;z-index:50;background:rgba(10,11,14,.86);backdrop-filter:blur(8px);border-bottom:1px solid #16171e}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;gap:.7rem;align-items:center}
-    .brand-logo{width:40px;height:40px;object-fit:contain;border-radius:8px}
-    .brand b{font-size:1.06rem;letter-spacing:.2px}
-    .nav .cta{padding:.62rem .9rem;border-radius:12px;background:var(--accent);color:#000;font-weight:800;border:none}
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:#0b0c0f;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid #1a1b21}
+    .brand{display:flex;align-items:center;gap:.5rem}
+    .brand-logo{width:34px;height:34px;object-fit:contain;border-radius:6px}
+    .cta{padding:.5rem 1rem;border-radius:10px;background:var(--accent);color:#000;font-weight:700;font-size:.95rem}
 
-    .hero{padding:40px 0;text-align:center;background:
-      radial-gradient(900px 400px at 85% -10%, rgba(255,122,0,.12), transparent 60%),
-      radial-gradient(900px 400px at 0% 10%, rgba(255,122,0,.08), transparent 60%)}
-    h1{font-size:clamp(1.8rem,4.8vw,2.8rem);line-height:1.15;margin:.5rem 0}
-    .lead{color:var(--muted);font-size:1.06rem}
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
-    .btn{padding:.92rem 1.08rem;border-radius:12px;font-weight:800;display:inline-flex;align-items:center;gap:.6rem;background:#171821;color:#fff;border:1px solid var(--br)}
-    .btn.primary{background:var(--accent);color:#000;border:none}
-    .pill{display:inline-flex;gap:.5rem;align-items:center;padding:.3rem .7rem;border-radius:999px;border:1px solid #262733;background:#13141a}
-    .ok{width:8px;height:8px;border-radius:99px;background:var(--ok)}
+    /* Hero */
+    .hero{text-align:center;padding:32px 0}
+    .hero h1{font-size:1.8rem;font-weight:800;margin:.5rem 0}
+    @media(min-width:768px){.hero h1{font-size:2.4rem}}
+    .lead{color:var(--muted);font-size:1rem;max-width:700px;margin:auto}
+    .cta-row{display:flex;flex-direction:column;gap:10px;align-items:center;margin-top:18px}
+    @media(min-width:600px){.cta-row{flex-direction:row}}
+    .btn{padding:.9rem 1.1rem;border-radius:10px;font-weight:700;text-align:center;width:100%;max-width:240px}
+    .btn.primary{background:var(--accent);color:#000}
+    .btn.secondary{background:#171821;border:1px solid var(--br);color:#fff}
 
-    .hero-grid{display:grid;gap:18px;margin-top:18px}
-    @media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;text-align:left}}
+    .card{background:var(--surface);padding:14px;border-radius:var(--radius);border:1px solid var(--br);margin-top:16px}
+    .price{text-align:center;margin-top:16px}
+    .price h2{margin:.3rem 0;font-size:1.6rem}
+    .strike{text-decoration:line-through;color:#999;margin-left:6px}
 
-    .card{background:var(--surface);border:1px solid var(--br);border-radius:var(--radius);padding:18px}
-    .price h2{margin:.3rem 0;font-size:1.8rem}
-    .strike{text-decoration:line-through;color:#bcc2c9}
+    .section{padding:32px 0}
+    .section h2{text-align:center;font-size:1.4rem;margin-bottom:16px}
 
-    .section{padding:40px 0}
-    .section h2{text-align:center;font-size:clamp(1.4rem,3.2vw,2rem)}
+    .list{display:grid;gap:10px}
+    @media(min-width:700px){.list.two{grid-template-columns:repeat(2,1fr)}}
+    .item{background:#12131a;border:1px solid var(--br);padding:12px;border-radius:10px;font-size:.95rem}
 
-    .grid3{display:grid;gap:16px}
-    @media(min-width:880px){.grid3{grid-template-columns:repeat(3,1fr)}}
+    .grid3{display:grid;gap:14px}
+    @media(min-width:800px){.grid3{grid-template-columns:repeat(3,1fr)}}
+    .testi{display:grid;gap:14px}
+    @media(min-width:800px){.testi{grid-template-columns:repeat(3,1fr)}}
+    .testi .card{font-size:.95rem}
 
-    .list{display:grid;gap:14px}
-    @media(min-width:880px){.list.two{grid-template-columns:repeat(2,1fr)}}
-    .item{display:flex;gap:12px;align-items:flex-start;background:#12131a;border:1px solid var(--br);padding:14px;border-radius:12px}
+    footer{text-align:center;padding:20px 0;color:#a7adb5;font-size:.85rem;border-top:1px solid #1a1b21}
 
-    .module{display:grid;gap:14px;margin-top:16px}
-    @media(min-width:880px){.module{grid-template-columns:repeat(3,1fr)}}
-    .block{background:#12131a;border:1px solid var(--br);padding:14px;border-radius:12px}
-
-    .testi{display:grid;gap:16px}
-    @media(min-width:880px){.testi{grid-template-columns:repeat(3,1fr)}}
-
-    footer{padding:24px 0;text-align:center;color:#a7adb5;border-top:1px solid #171821;font-size:.9rem}
-
-    .sticky-wrap{position:fixed;inset:auto 0 12px 0;display:flex;justify-content:center;z-index:60}
-    .sticky{display:flex;gap:12px;align-items:center;background:#14151d;border:1px solid var(--br);padding:10px 14px;border-radius:14px}
-    .badge{background:#1a1b23;border:1px solid var(--br);padding:.24rem .6rem;border-radius:999px}
+    /* Sticky Buy Bar */
+    .sticky-wrap{position:fixed;bottom:10px;left:0;right:0;z-index:60;display:flex;justify-content:center}
+    .sticky{display:flex;align-items:center;gap:10px;background:#14151d;border:1px solid var(--br);padding:10px 14px;border-radius:12px;max-width:340px;width:92%}
+    .badge{background:#1a1b23;padding:2px 8px;border-radius:999px;font-size:.8rem}
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <div class="brand">
-        <img class="brand-logo" src="8582719c-91e1-41a2-a622-c314b25c1fc0.jpg" alt="Tech Buzz">
-        <b>Tech Buzz</b>
-      </div>
-      <a class="cta" href="#buy">Buy ₹149</a>
+    <div class="brand">
+      <img class="brand-logo" src="assets/techbuzz-logo.png" alt="Tech Buzz">
+      <b>Tech Buzz</b>
     </div>
+    <a class="cta" href="#buy">Buy ₹149</a>
   </header>
 
   <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="pill"><span class="ok"></span> Learn to Earn • AI for Beginners</span>
-        <h1>How to Create & Sell Digital Products Using <span style="color:var(--accent);font-weight:800">AI</span></h1>
-        <p class="lead">This ebook teaches you how to earn income online by creating and selling digital products with AI. From idea validation to automation – step by step.</p>
-        <div class="cta-row">
-          <a id="buy" class="btn primary" href="YOUR_PAYMENT_LINK" target="_blank" rel="noopener">Get Access for ₹149</a>
-          <a class="btn" href="#inside">See What’s Inside</a>
-        </div>
-        <div class="card" style="margin-top:14px">✅ Lifetime access • Instant download • Includes Bonus Ebook</div>
+    <div class="container">
+      <h1>How to Create & Sell Digital Products Using <span style="color:var(--accent)">AI</span></h1>
+      <p class="lead">Learn how to earn income online by creating and selling digital products with AI. From finding ideas to scaling to consistent sales.</p>
+      <div class="cta-row">
+        <a id="buy" class="btn primary" href="YOUR_PAYMENT_LINK" target="_blank">Get Access – ₹149</a>
+        <a class="btn secondary" href="#inside">See Inside</a>
       </div>
-      <div>
-        <img src="How to create and sell digital product ussing ai.jpg.png" alt="How to Create & Sell Digital Products Using AI – mockup"/>
-        <div class="card price" style="margin-top:12px;text-align:center">
-          <div>Launch Price</div>
-          <h2>₹149 <span class="strike">₹999</span></h2>
-          <small>Limited‑time offer</small>
-        </div>
-      </div>
+      <div class="card">✅ Lifetime access • Instant download • Bonus Ebook Included</div>
+      <img src="assets/ai-income-ebook-mockup.jpg" alt="Ebook mockup" style="margin-top:16px">
+      <div class="price"><h2>₹149 <span class="strike">₹999</span></h2><small>Limited-time launch offer</small></div>
     </div>
   </section>
 
   <section id="inside" class="section">
     <h2>What You’ll Learn</h2>
     <div class="container list two">
-      <div class="item">✅ How to find profitable ideas for ebooks, templates, or courses using AI</div>
-      <div class="item">✅ Step‑by‑step guide to create your first digital product with AI</div>
-      <div class="item">✅ How to design covers, layouts, and mockups without skills</div>
-      <div class="item">✅ Setting up a landing page + connecting payment gateway</div>
-      <div class="item">✅ Automating delivery – earn even while you sleep</div>
-      <div class="item">✅ Growth roadmap – scaling from first sale to 100+ sales</div>
+      <div class="item">✅ Find profitable product ideas with AI</div>
+      <div class="item">✅ Create ebooks, templates, or mini-courses using free AI tools</div>
+      <div class="item">✅ Design covers and mockups easily</div>
+      <div class="item">✅ Setup a landing page & payment gateway</div>
+      <div class="item">✅ Automate delivery and earn passively</div>
+      <div class="item">✅ Growth roadmap to scale sales</div>
     </div>
   </section>
 
   <section class="section">
-    <h2>Bonus Included – Free with This Ebook</h2>
+    <h2>Bonus Ebook Included</h2>
     <div class="container grid3">
-      <div class="card">
-        <h3>🎁 Bonus Ebook</h3>
-        <p><b>How to Earn 1 Crore Using AI (2026)</b><br/>Advanced strategies to scale your AI income journey from basics to ₹1 Cr target.</p>
-      </div>
-      <div class="card">
-        <h3>📑 Ready Checklists</h3>
-        <p>Action plans and launch trackers so you don’t miss any step.</p>
-      </div>
-      <div class="card">
-        <h3>💡 Extra Prompts</h3>
-        <p>Best ChatGPT prompts for content, marketing copy, and product creation.</p>
-      </div>
+      <div class="card"><h3>🎁 How to Earn 1 Crore Using AI (2026)</h3><p>Advanced roadmap to scale your digital products journey to 1 Cr by 2026.</p></div>
+      <div class="card"><h3>📑 Checklists</h3><p>Action plans and trackers for smooth launch.</p></div>
+      <div class="card"><h3>💡 Extra Prompts</h3><p>Best AI prompts for product creation and marketing.</p></div>
     </div>
-    <div class="container" style="margin-top:16px">
-      <img src="How to earn 1cr ussing ai.jpg.png" alt="Bonus ebook mockup">
-    </div>
+    <img src="assets/bonus-ebook-mockup.jpg" alt="Bonus ebook" style="margin-top:16px">
   </section>
 
   <section class="section">
     <h2>Why This Ebook?</h2>
     <div class="container list">
-      <div class="item">👤 Author: Achintya Chouni – 4 years of experience selling digital products</div>
-      <div class="item">🚀 Focused on earning income, not just theory</div>
-      <div class="item">🛠️ Beginner‑friendly, action‑oriented approach</div>
+      <div class="item">👤 Author: Achintya Chouni – 4 years experience selling digital products</div>
+      <div class="item">🚀 Focused on real earning outcomes</div>
+      <div class="item">🛠️ Simple, beginner-friendly approach</div>
     </div>
   </section>
 
   <section class="section">
     <h2>What Readers Say</h2>
     <div class="container testi">
-      <div class="card">“Helped me launch my first AI product in 2 days. Already made my first sales.” — Aviral</div>
-      <div class="card">“The bonus ebook opened my eyes to scaling big. Worth it.” — Sana</div>
-      <div class="card">“Clear, step‑by‑step, and practical. No confusion at all.” — Ritesh</div>
+      <div class="card">“Helped me launch my first AI product in 2 days. Got my first sales.” — Aviral</div>
+      <div class="card">“Bonus ebook showed me how to scale big. Worth it.” — Sana</div>
+      <div class="card">“Clear and step-by-step. Easy to follow.” — Ritesh</div>
     </div>
   </section>
 
   <section class="section">
     <h2>FAQ</h2>
     <div class="container list">
-      <div class="item">❓ Do I need to know coding?<br/>✨ No. Everything is explained for beginners.</div>
-      <div class="item">❓ How do I pay?<br/>✨ Use the Buy button (linked to Instamojo/Razorpay/Gumroad). Replace <b>YOUR_PAYMENT_LINK</b> with your payment URL.</div>
-      <div class="item">❓ Do I get the bonus immediately?<br/>✨ Yes, both ebooks are included in the same download.</div>
+      <div class="item">❓ Do I need coding?<br/>✨ No. All steps are explained for beginners.</div>
+      <div class="item">❓ How do I pay?<br/>✨ Replace <b>YOUR_PAYMENT_LINK</b> with your Instamojo/Razorpay/Gumroad link.</div>
+      <div class="item">❓ Do I get the bonus instantly?<br/>✨ Yes, both ebooks are included in one download.</div>
     </div>
   </section>
 
   <footer>
-    © <span id="yr"></span> Tech Buzz • Created by Achintya Chouni • All rights reserved
+    © <span id="yr"></span> Tech Buzz • Created by Achintya Chouni
   </footer>
 
-  <div class="sticky-wrap" aria-hidden="false">
+  <div class="sticky-wrap">
     <div class="sticky">
-      <span class="badge">Special Offer</span>
+      <span class="badge">Offer</span>
       <b>₹149</b>
-      <a class="btn primary" href="YOUR_PAYMENT_LINK" target="_blank" rel="noopener">Buy Now</a>
+      <a class="btn primary" href="YOUR_PAYMENT_LINK" target="_blank">Buy Now</a>
     </div>
   </div>
 
