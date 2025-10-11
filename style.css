@@ -1,0 +1,103 @@
+/* General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  color: #FFFFFF;
+  background-color: #0A1D3A;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.2rem; }
+p { margin-bottom: 1rem; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #FCA311;
+  color: #0A1D3A;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 15px #FCA311, 0 0 25px #FCA311;
+  transform: translateY(-3px);
+}
+
+/* Hero */
+#hero {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.hero-text { max-width: 600px; margin-bottom: 2rem; }
+.hero-books { display: flex; gap: 2rem; }
+.book-cover { width: 200px; border-radius: 10px; }
+.book-cover.bonus { border: 3px solid #FCA311; box-shadow: 0 0 15px #FCA311; }
+
+/* What You’ll Learn */
+#learn { padding: 4rem 0; text-align: center; }
+.learn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.learn-card { background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; transition: 0.3s; }
+.learn-card:hover { box-shadow: 0 0 15px #FCA311; transform: translateY(-5px); }
+.learn-card img { width: 50px; margin-bottom: 1rem; }
+
+/* Review Slider */
+#reviews { padding: 4rem 0; }
+.review-slider { display: flex; align-items: center; position: relative; }
+.review-track { display: flex; overflow: hidden; scroll-behavior: smooth; }
+.review-card { min-width: 250px; background: rgba(255,255,255,0.05); padding: 1rem; margin: 0 1rem; border-radius: 10px; transition: 0.3s; }
+.review-card:hover { box-shadow: 0 0 15px #FCA311; transform: scale(1.05); }
+.prev, .next { background: #FCA311; border: none; padding: 0.5rem 1rem; cursor: pointer; font-size: 1.5rem; border-radius: 5px; margin: 0 0.5rem; }
+
+/* Bonus Book */
+#bonus { padding: 4rem 0; text-align: center; }
+.badge { display: inline-block; background: #FCA311; color: #0A1D3A; padding: 0.5rem 1rem; border-radius: 5px; margin-bottom: 1rem; font-weight: 700; }
+.bonus-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem; }
+.bonus-book-img { width: 200px; border: 3px solid #FCA311; box-shadow: 0 0 15px #FCA311; border-radius: 10px; }
+.bonus-content ul { list-style: disc; color: #FCA311; padding-left: 1.5rem; text-align: left; }
+
+/* Pricing */
+#pricing { padding: 4rem 0; text-align: center; }
+.btn-gold:hover { box-shadow: 0 0 20px #FCA311, 0 0 30px #FCA311; transform: translateY(-5px); }
+
+/* FAQ */
+#faq { padding: 4rem 0; }
+.faq-item { margin-bottom: 1rem; }
+.faq-question { width: 100%; text-align: left; background: rgba(255,255,255,0.05); color: #FFFFFF; padding: 1rem; border: none; cursor: pointer; font-weight: 600; border-radius: 5px; transition: 0.3s; }
+.faq-question:hover { box-shadow: 0 0 15px #FCA311; }
+.faq-answer { display: none; background: rgba(255,255,255,0.05); padding: 1rem; margin-top: 0.5rem; border-radius: 5px; }
+
+/* Author */
+#author { padding: 4rem 0; text-align: center; }
+.author-container p { max-width: 700px; margin: auto; }
+
+/* Footer */
+footer { padding: 2rem 0; text-align: center; background: rgba(255,255,255,0.05); }
+footer a { color: #FCA311; margin: 0 0.5rem; text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container { flex-direction: column; }
+  .hero-books { justify-content: center; }
+  .bonus-content { flex-direction: column; align-items: center; }
+  .review-card { min-width: 80%; margin: 0 0.5rem; }
+}
