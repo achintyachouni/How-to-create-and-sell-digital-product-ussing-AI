@@ -7,30 +7,3 @@ faqItems.forEach(item => {
     answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
   });
 });
-
-// Review Slider
-const track = document.querySelector('.review-track');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-function getCardWidth() {
-  const card = document.querySelector('.review-card');
-  return card.offsetWidth + 16; // include margin
-}
-
-nextBtn.addEventListener('click', () => {
-  track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-});
-
-prevBtn.addEventListener('click', () => {
-  track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
-});
-
-// Auto scroll every 5 seconds
-setInterval(() => {
-  if(track.scrollLeft + track.offsetWidth >= track.scrollWidth){
-    track.scrollTo({ left: 0, behavior: 'smooth' });
-  } else {
-    track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-  }
-}, 5000);
