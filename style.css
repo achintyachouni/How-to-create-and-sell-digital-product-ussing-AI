@@ -61,12 +61,42 @@ p { margin-bottom: 1rem; }
 .learn-card img { width: 50px; margin-bottom: 1rem; }
 
 /* Review Slider */
-#reviews { padding: 4rem 0; }
-.review-slider { display: flex; align-items: center; position: relative; }
-.review-track { display: flex; overflow: hidden; scroll-behavior: smooth; }
-.review-card { min-width: 250px; background: rgba(255,255,255,0.05); padding: 1rem; margin: 0 1rem; border-radius: 10px; transition: 0.3s; }
-.review-card:hover { box-shadow: 0 0 15px #FCA311; transform: scale(1.05); }
-.prev, .next { background: #FCA311; border: none; padding: 0.5rem 1rem; cursor: pointer; font-size: 1.5rem; border-radius: 5px; margin: 0 0.5rem; }
+.review-slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.review-card {
+  min-width: 250px;
+  margin: 0 1rem;
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  box-shadow: 0 0 15px #FCA311;
+  transform: scale(1.05);
+}
+
+/* Mobile “peek” effect */
+@media (max-width: 768px) {
+  .review-track {
+    gap: 1rem;
+  }
+  .review-card {
+    min-width: calc(50% - 0.5rem); /* Show 2 cards half-visible */
+  }
+}
 
 /* Bonus Book */
 #bonus { padding: 4rem 0; text-align: center; }
