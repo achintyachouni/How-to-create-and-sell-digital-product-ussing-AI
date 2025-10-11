@@ -13,10 +13,10 @@ const track = document.querySelector('.review-track');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-let getCardWidth = () => {
+function getCardWidth() {
   const card = document.querySelector('.review-card');
-  return card.offsetWidth + 16; // margin adjusted
-};
+  return card.offsetWidth + 16; // include margin
+}
 
 nextBtn.addEventListener('click', () => {
   track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
@@ -34,4 +34,3 @@ setInterval(() => {
     track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
   }
 }, 5000);
-
