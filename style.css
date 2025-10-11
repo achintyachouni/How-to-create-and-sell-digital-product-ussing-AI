@@ -74,12 +74,11 @@ p { margin-bottom: 1rem; }
 }
 
 .review-card {
-  min-width: 250px;
-  margin: 0 1rem;
+  flex: 0 0 250px; /* desktop width */
+  margin-right: 16px;
   background: rgba(255,255,255,0.05);
   padding: 1rem;
   border-radius: 10px;
-  flex-shrink: 0;
   transition: 0.3s;
 }
 
@@ -90,11 +89,9 @@ p { margin-bottom: 1rem; }
 
 /* Mobile “peek” effect */
 @media (max-width: 768px) {
-  .review-track {
-    gap: 1rem;
-  }
   .review-card {
-    min-width: calc(50% - 0.5rem); /* Show 2 cards half-visible */
+    flex: 0 0 70%; /* Show 1 full + 30% of next */
+    margin-right: 16px;
   }
 }
 
