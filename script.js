@@ -13,15 +13,17 @@ const track = document.querySelector('.review-track');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-let scrollAmount = 0;
-const cardWidth = document.querySelector('.review-card').offsetWidth + 32; // margin included
+let getCardWidth = () => {
+  const card = document.querySelector('.review-card');
+  return card.offsetWidth + 16; // margin adjusted
+};
 
 nextBtn.addEventListener('click', () => {
-  track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
 });
 
 prevBtn.addEventListener('click', () => {
-  track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
 });
 
 // Auto scroll every 5 seconds
@@ -29,6 +31,7 @@ setInterval(() => {
   if(track.scrollLeft + track.offsetWidth >= track.scrollWidth){
     track.scrollTo({ left: 0, behavior: 'smooth' });
   } else {
-    track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
   }
 }, 5000);
+
